@@ -10,9 +10,14 @@ import { useState } from 'react';
 function Home() {
   const [theme, setTheme] = useState('dark');
   function toggleThemeHandler() {
-    theme === 'dark' ? setTheme('light') : setTheme('dark');
+    if (theme === 'dark') {
+      setTheme('light');
+    } else {
+      setTheme('dark');
+    }
     document.body.classList.toggle('lightTheme');
   }
+
   return (
     <ThemeContext.Provider value={theme}>
       <div className="App">
