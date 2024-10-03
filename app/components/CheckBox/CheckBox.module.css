@@ -1,0 +1,66 @@
+.checkBoxTextDark {
+  color: var(--light-grayish-blue-hover);
+  font-size: 22px;
+}
+
+.checkBoxTextLight {
+  color: var(--very-dark-grayish-blue);
+  font-size: 22px;
+}
+
+.checkBoxContainer {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 2%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  float: left;
+  width: 50px;
+  height: 30px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1400px) {
+  .checkBoxContainer {
+    width: 50%;
+    margin-top: 20px;
+    padding: 2%;
+  }
+
+  .checkBoxTextLight,
+  .checkBoxTextDark {
+    font-size: 15px;
+  }
+
+  .input {
+    width: 40px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  .checkBoxContainer {
+    width: 70%;
+    margin-top: 20px;
+    padding: 2% 2% 2% 2%;
+  }
+
+  .checkBoxTextLight,
+  .checkBoxTextDark {
+    font-size: 8px;
+  }
+
+  .input {
+    height: 20px;
+    width: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+  }
+}

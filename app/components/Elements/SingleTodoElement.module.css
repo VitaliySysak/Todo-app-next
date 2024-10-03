@@ -1,0 +1,90 @@
+.todoElement {
+  width: 100%;
+  min-height: 79px;
+  border-bottom: 1px solid var(--very-dark-grayish-blue);
+  display: flex;
+  align-items: center;
+}
+
+.taskTitleDark {
+  font-size: 25px;
+  color: var(--light-grayish-blue);
+  font-weight: 200;
+  width: 78%;
+}
+
+.taskTitleLight {
+  font-size: 25px;
+  color: var(--very-dark-grayish-blue);
+  font-weight: 200;
+  width: 78%;
+}
+
+.deleteIcon {
+  color: var(--dark-grayish-blue);
+  transition: transform 0.3s;
+  user-select: none;
+  font-size: 1.5rem;
+}
+
+.deleteIcon:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  color: red;
+}
+
+.checkOn {
+  background: var(--check-background);
+}
+
+.completedTodo {
+  text-decoration: line-through;
+  color: var(--very-dark-grayish-blue);
+}
+
+.checkMark {
+  width: 15px;
+  user-select: none;
+}
+
+@media (max-width: 1400px) {
+  .todoElement {
+    width: 100%;
+    min-height: 59px;
+  }
+
+  .taskTitleDark,
+  .taskTitleLight {
+    font-size: 16px;
+    font-weight: 200;
+  }
+
+  .deleteIcon {
+    font-size: 1.3rem;
+  }
+  
+  .checkMark {
+    width: 12px;
+  }
+}
+
+@media (max-width: 750px) {
+  .todoElement {
+    width: 100%;
+    min-height: 39px;
+  }
+
+  .taskTitleDark,
+  .taskTitleLight {
+    font-size: 10px;
+    font-weight: 200;
+  }
+
+  .deleteIcon {
+    font-size: 1rem;
+  }
+
+  .checkMark {
+    width: 8px;
+  }
+}

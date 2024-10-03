@@ -1,0 +1,66 @@
+.createNewTodoContainer {
+  width: 100%;
+  height: 80px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.input {
+  font-size: 25px;
+  color: var(--dark-grayish-blue);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 78%;
+}
+
+.addIcon {
+  color: var(--dark-grayish-blue);
+  transition: transform 0.3s;
+  user-select: none;
+  transform: rotate(45deg);
+  font-size: 1.5rem;
+}
+
+.addIcon:hover {
+  cursor: pointer;
+  transform: rotate(45deg) scale(1.2);
+  color: green;
+}
+
+@media (max-width: 1400px) {
+  .createNewTodoContainer {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 30px;
+  }
+
+  .input {
+    font-size: 18px;
+    width: 78%;
+  }
+
+  .addIcon {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .createNewTodoContainer {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 30px;
+  }
+
+  .input {
+    font-size: 12px;
+    width: 78%;
+  }
+
+  .addIcon {
+    font-size: 1rem;
+  }
+}
