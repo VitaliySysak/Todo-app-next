@@ -1,7 +1,13 @@
 import { v4 as uuid } from 'uuid';
 
-export const addTodoHandler = (text: string, todos: any[], setTodos: any) => {
-  const newTodo = {
+interface Todo {
+  id: string;
+  text: string;
+  isCompleted: boolean;
+}
+
+export const addTodoHandler = (text: string, todos: Todo[], setTodos: (todos: Todo[]) => void) => {
+  const newTodo: Todo = {
     id: uuid(),
     text: text,
     isCompleted: false,
@@ -9,7 +15,7 @@ export const addTodoHandler = (text: string, todos: any[], setTodos: any) => {
   setTodos([...todos, newTodo]);
 };
 
-export const toggleTodoHandler = (id: string, todos: any[], setTodos: any) => {
+export const toggleTodoHandler = (id: string, todos: Todo[], setTodos: (todos: Todo[]) => void) => {
   setTodos(
     todos.map((todo) =>
       todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo
@@ -17,14 +23,14 @@ export const toggleTodoHandler = (id: string, todos: any[], setTodos: any) => {
   );
 };
 
-export const deleteTodoHandler = (id: string, todos: any[], setTodos: any) => {
+export const deleteTodoHandler = (id: string, todos: Todo[], setTodos: (todos: Todo[]) => void) => {
   setTodos(todos.filter((todo) => todo.id !== id));
 };
 
-export const deleteCompletedTodosHandler = (todos: any[], setTodos: any) => {
+export const deleteCompletedTodosHandler = (todos: Todo[], setTodos: (todos: Todo[]) => void) => {
   setTodos(todos.filter((todo) => !todo.isCompleted));
 };
 
-export const unCompletedTodosCount = (todos: any[]) => {
+export const unCompletedTodosCount = (todos: Todo[]): number => {
   return todos.filter((todo) => !todo.isCompleted).length;
 };
